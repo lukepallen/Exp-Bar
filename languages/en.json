@@ -1,8 +1,8 @@
 {
-    "bossbar": {
+    "expbar": {
         "controls": {
-            "bossUI": {
-                "name": "Toggle Boss Bar",
+            "expUI": {
+                "name": "Toggle Exp Bar",
                 "warn": "No token selected. Please select one or multiple tokens and try again"
             }
         },
@@ -20,12 +20,12 @@
                 "hint": "Data path to the max hp of an actor"
             },
             "BarStyleConfiguration": {
-                "name": "Boss Bar Styles",
+                "name": "Exp Bar Styles",
                 "label": "Configure Styles"
             },
             "resetPosition": {
                 "name": "Reset Position",
-                "hint": "Reset the position of the Boss Bar to the default"
+                "hint": "Reset the position of the Exp Bar to the default"
             },
             "textAlign": {
                 "left": "Left",
@@ -39,7 +39,7 @@
         },
         "bar-style-configuration": {
             "add": "Add Style",
-            "title": "Boss Bar Style Configuration",
+            "title": "Exp Bar Style Configuration",
             "delete-title": "Delete Style",
             "delete-confirm": "Are you sure you want to delete this style?",
             "edit": "Edit Style",
@@ -48,23 +48,23 @@
             "bar": "Bar Image",
             "tempBarColor": "Temporary Healthbar Color",
             "tempBarAlpha": "Temporary Healthbar Alpha",
-            "barHeight": "Boss Bar Height",
+            "barHeight": "Exp Bar Height",
             "font": "Font Family",
             "textSize": "Font Size",
             "textAlign": "Text Align",
             "type": "Style Type",
             "type-hint": "Select the style type"
         },
-        "boss-bar-configuration": {
-            "title": "Boss Bar Configuration",
+        "exp-bar-configuration": {
+            "title": "Exp Bar Configuration",
             "no-actors": "No actors selected or present in the scene.",
             "no-scene": "No scene available. Please view a scene and try again",
             "save-pan": "Save & Pan Camera",
             "edit-themes": "Close & Edit Themes",
-            "hideNameHint": "Hide the name of the actor in the Boss Bar"
+            "hideNameHint": "Hide the name of the actor in the Exp Bar"
         },
-        "boss-bar": {
-            "title": "Boss Bar"
+        "exp-bar": {
+            "title": "Exp Bar"
         }
     }
 }

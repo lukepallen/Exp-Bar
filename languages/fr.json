@@ -1,5 +1,5 @@
 {
-    "bossbar": {
+    "expbar": {
         "bar-style-configuration": {
             "add": "Ajouter du style",
             "background": "Image d'arrière-plan",
@@ -13,25 +13,25 @@
             "tempBarColor": "Couleur de la barre de santé temporaire",
             "textAlign": "Aligner le texte",
             "textSize": "Taille de la police",
-            "title": "Configuration du style de barre de boss",
+            "title": "Configuration du style de barre de exp",
             "type": "Type de style",
             "type-hint": "Sélectionnez le type de style",
             "font": "Famille de polices"
         },
-        "boss-bar-configuration": {
+        "exp-bar-configuration": {
             "edit-themes": "Fermer",
-            "hideNameHint": "Cacher le nom de l'acteur dans le Boss Bar",
+            "hideNameHint": "Cacher le nom de l'acteur dans le Exp Bar",
             "no-actors": "Aucun acteur sélectionné ou présent dans la scène.",
             "no-scene": "Aucune scène disponible. \nVeuillez visionner une scène et réessayer",
             "save-pan": "Sauvegarder",
             "title": "Configuration de la barre de patron"
         },
-        "boss-bar": {
+        "exp-bar": {
             "title": "Barre de patron"
         },
         "controls": {
-            "bossUI": {
-                "name": "Basculer la barre de boss",
+            "expUI": {
+                "name": "Basculer la barre de exp",
                 "warn": "Aucun jeton sélectionné. \nVeuillez sélectionner un ou plusieurs jetons et réessayer"
             }
         },
@@ -53,7 +53,7 @@
                 "name": "Chemin de HP maximum"
             },
             "resetPosition": {
-                "hint": "Réinitialiser la position de la Boss Bar à la valeur par défaut",
+                "hint": "Réinitialiser la position de la Exp Bar à la valeur par défaut",
                 "name": "Réinitialiser la position"
             },
             "textAlign": {

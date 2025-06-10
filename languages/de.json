@@ -1,10 +1,10 @@
 {
-    "bossbar": {
+    "expbar": {
         "bar-style-configuration": {
             "add": "Stil hinzufügen",
             "background": "Hintergrundbild",
             "bar": "Balkenbild",
-            "barHeight": "Boss-Bar-Höhe",
+            "barHeight": "Exp-Bar-Höhe",
             "delete-confirm": "Möchten Sie diesen Stil wirklich löschen?",
             "delete-title": "Stil löschen",
             "edit": "Stil bearbeiten",
@@ -13,32 +13,32 @@
             "tempBarColor": "Temporäre Farbe der Gesundheitsleiste",
             "textAlign": "Text ausrichten",
             "textSize": "Schriftgröße",
-            "title": "Konfiguration des Boss-Bar-Stils",
+            "title": "Konfiguration des Exp-Bar-Stils",
             "type": "Stiltyp",
             "type-hint": "Wählen Sie den Stiltyp aus",
             "font": "Schriftfamilie"
         },
-        "boss-bar-configuration": {
+        "exp-bar-configuration": {
             "edit-themes": "Schließen",
-            "hideNameHint": "Verstecken Sie den Namen des Schauspielers in der Boss Bar",
+            "hideNameHint": "Verstecken Sie den Namen des Schauspielers in der Exp Bar",
             "no-actors": "Keine Schauspieler ausgewählt oder in der Szene anwesend.",
             "no-scene": "Keine Szene verfügbar. \nBitte sehen Sie sich eine Szene an und versuchen Sie es erneut",
             "save-pan": "Speichern",
-            "title": "Boss-Bar-Konfiguration"
+            "title": "Exp-Bar-Konfiguration"
         },
-        "boss-bar": {
-            "title": "Boss-Bar"
+        "exp-bar": {
+            "title": "Exp-Bar"
         },
         "controls": {
-            "bossUI": {
-                "name": "Boss-Leiste umschalten",
+            "expUI": {
+                "name": "Exp-Leiste umschalten",
                 "warn": "Kein Token ausgewählt. \nBitte wählen Sie einen oder mehrere Token aus und versuchen Sie es erneut"
             }
         },
         "settings": {
             "BarStyleConfiguration": {
                 "label": "Konfigurieren Sie Stile",
-                "name": "Boss Bar-Stile"
+                "name": "Exp Bar-Stile"
             },
             "barStyle": {
                 "classic": "Klassiker",
@@ -53,7 +53,7 @@
                 "name": "Max. HP-Pfad"
             },
             "resetPosition": {
-                "hint": "Setzen Sie die Position der Boss-Leiste auf die Standardeinstellung zurück",
+                "hint": "Setzen Sie die Position der Exp-Leiste auf die Standardeinstellung zurück",
                 "name": "Position zurücksetzen"
             },
             "textAlign": {

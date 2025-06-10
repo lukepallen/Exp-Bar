@@ -1,8 +1,8 @@
 {
-    "bossbar": {
+    "expbar": {
         "controls": {
-            "bossUI": {
-                "name": "Alternar Boss Bar",
+            "expUI": {
+                "name": "Alternar Exp Bar",
                 "warn": "Nenhum token selecionado. Selecione um ou mais tokens e tente novamente."
             }
         },
@@ -20,12 +20,12 @@
                 "hint": "Caminho de dados para os pontos de vida máximos de um ator."
             },
             "BarStyleConfiguration": {
-                "name": "Estilos Boss Bar",
+                "name": "Estilos Exp Bar",
                 "label": "Configurar estilos"
             },
             "resetPosition": {
                 "name": "Redefinir Posição",
-                "hint": "Redefine a posição da Boss Bar para o padrão."
+                "hint": "Redefine a posição da Exp Bar para o padrão."
             },
             "textAlign": {
                 "left": "Esquerda",
@@ -39,7 +39,7 @@
         },
         "bar-style-configuration": {
             "add": "Adicionar Estilo",
-            "title": "Configuração de Estilo Boss Bar",
+            "title": "Configuração de Estilo Exp Bar",
             "delete-title": "Deletar Estilo",
             "delete-confirm": "Tem certeza de que quer excluir este estilo?",
             "edit": "Editar Estilo",
@@ -48,23 +48,23 @@
             "bar": "Imagem da Barra",
             "tempBarColor": "Cor da Barra Temporária de Vida",
             "tempBarAlpha": "Alpha da Barra Temporária de Vida",
-            "barHeight": "Altura da Boss Bar",
+            "barHeight": "Altura da Exp Bar",
             "font": "Família da Fonte",
             "textSize": "Tamanho da Fonte",
             "textAlign": "Alinhamento do Texto",
             "type": "Tipo de Estilo",
             "type-hint": "Selecione o tipo de estilo"
         },
-        "boss-bar-configuration": {
-            "title": "Configuraão Boss Bar",
+        "exp-bar-configuration": {
+            "title": "Configuraão Exp Bar",
             "no-actors": "Nenhum ator selecionado ou presente na cena.",
             "no-scene": "Nenhuma cena disponível. Por favor, veja uma cena e tente novamente.",
             "save-pan": "Salvar e Focar Câmera",
             "edit-themes": "Fechar e Editar Temas",
-            "hideNameHint": "Esconder o nome do ator na Boss Bar"
+            "hideNameHint": "Esconder o nome do ator na Exp Bar"
         },
-        "boss-bar": {
-            "title": "Boss Bar"
+        "exp-bar": {
+            "title": "Exp Bar"
         }
     }
 }

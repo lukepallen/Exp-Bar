@@ -1,5 +1,5 @@
 import { BarStyleConfiguration } from "./app/BarStyleConfiguration.js";
-import { BossBar } from "./app/BossBar.js";
+import { ExpBar } from "./app/ExpBar.js";
 import { BAR_STYLES, MODULE_ID } from "./main.js";
 
 const SETTING_CACHE = {};
@@ -8,8 +8,8 @@ const DEFAULT_CACHE = false;
 export const DEFAULT_BAR_STYLE = {
     name: "Classic - Red",
     id: "default",
-    background: "modules/bossbar/resources/Dark.webp",
-    bar: "modules/bossbar/resources/Blood.webp",
+    background: "modules/expbar/resources/Dark.webp",
+    bar: "modules/expbar/resources/Blood.webp",
     foreground: "",
     tempBarColor: "#7e7e7e",
     tempBarAlpha: 0.5,
@@ -25,72 +25,72 @@ const PREDEFINED_BAR_STYLES = [
         ...DEFAULT_BAR_STYLE,
         name: "Classic - Ice",
         id: "default-ice",
-        bar: "modules/bossbar/resources/Ice.webp",
+        bar: "modules/expbar/resources/Ice.webp",
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Classic - Grass",
         id: "default-grass",
-        bar: "modules/bossbar/resources/Grass.webp",
+        bar: "modules/expbar/resources/Grass.webp",
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Classic - Oak",
         id: "default-oak",
-        bar: "modules/bossbar/resources/Oak.webp",
+        bar: "modules/expbar/resources/Oak.webp",
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Evil",
         id: "evil",
-        foreground: "modules/bossbar/resources/matching-images/evil/fg.png",
-        bar: "modules/bossbar/resources/matching-images/evil/bar.png",
-        background: "modules/bossbar/resources/matching-images/evil/bg.png",
+        foreground: "modules/expbar/resources/matching-images/evil/fg.png",
+        bar: "modules/expbar/resources/matching-images/evil/bar.png",
+        background: "modules/expbar/resources/matching-images/evil/bg.png",
         type: 1,
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Gears",
         id: "gears",
-        foreground: "modules/bossbar/resources/matching-images/gears/fg.webp",
-        bar: "modules/bossbar/resources/matching-images/gears/bar.webp",
-        background: "modules/bossbar/resources/matching-images/gears/bg.webp",
+        foreground: "modules/expbar/resources/matching-images/gears/fg.webp",
+        bar: "modules/expbar/resources/matching-images/gears/bar.webp",
+        background: "modules/expbar/resources/matching-images/gears/bg.webp",
         type: 1,
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Ooze",
         id: "ooze",
-        foreground: "modules/bossbar/resources/matching-images/ooze/fg.webp",
-        bar: "modules/bossbar/resources/matching-images/ooze/bar.webp",
-        background: "modules/bossbar/resources/matching-images/ooze/bg.webp",
+        foreground: "modules/expbar/resources/matching-images/ooze/fg.webp",
+        bar: "modules/expbar/resources/matching-images/ooze/bar.webp",
+        background: "modules/expbar/resources/matching-images/ooze/bg.webp",
         type: 1,
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Royal",
         id: "royal",
-        foreground: "modules/bossbar/resources/matching-images/royal/fg.png",
-        bar: "modules/bossbar/resources/matching-images/royal/bar.png",
-        background: "modules/bossbar/resources/matching-images/royal/bg.png",
+        foreground: "modules/expbar/resources/matching-images/royal/fg.png",
+        bar: "modules/expbar/resources/matching-images/royal/bar.png",
+        background: "modules/expbar/resources/matching-images/royal/bg.png",
         type: 1,
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Segmented",
         id: "segmented",
-        foreground: "modules/bossbar/resources/matching-images/segmented/fg.png",
-        bar: "modules/bossbar/resources/matching-images/segmented/bar.png",
-        background: "modules/bossbar/resources/matching-images/segmented/bg.png",
+        foreground: "modules/expbar/resources/matching-images/segmented/fg.png",
+        bar: "modules/expbar/resources/matching-images/segmented/bar.png",
+        background: "modules/expbar/resources/matching-images/segmented/bg.png",
         type: 1,
     },
     {
         ...DEFAULT_BAR_STYLE,
         name: "Steampunk",
         id: "steampunk",
-        foreground: "modules/bossbar/resources/matching-images/steampunk/fg.png",
-        bar: "modules/bossbar/resources/matching-images/steampunk/bar.png",
-        background: "modules/bossbar/resources/matching-images/steampunk/bg.png",
+        foreground: "modules/expbar/resources/matching-images/steampunk/fg.png",
+        bar: "modules/expbar/resources/matching-images/steampunk/bar.png",
+        background: "modules/expbar/resources/matching-images/steampunk/bg.png",
         type: 1,
     },
 ]
@@ -102,7 +102,7 @@ export function registerSettings() {
             config: false,
             type: Array,
             default: [{ ...DEFAULT_BAR_STYLE }, ...PREDEFINED_BAR_STYLES],
-            onChange: () => BossBar.update(),
+            onChange: () => ExpBar.update(),
         },
 
         barPosition: {
@@ -117,7 +117,7 @@ export function registerSettings() {
             type: Boolean,
             default: false,
             onChange: (value) => {
-                if (value) BossBar.resetPosition();
+                if (value) ExpBar.resetPosition();
             }
         },
 
@@ -144,8 +144,8 @@ export function registerSettings() {
     registerSettingsArray(settings);
 
     game.settings.registerMenu(MODULE_ID, "BarStyleConfiguration", {
-        name: "bossbar.settings.BarStyleConfiguration.name",
-        label: "bossbar.settings.BarStyleConfiguration.label",
+        name: "expbar.settings.BarStyleConfiguration.name",
+        label: "expbar.settings.BarStyleConfiguration.label",
         icon: "fas fa-paint-brush",
         type: BarStyleConfiguration,
         restricted: true,

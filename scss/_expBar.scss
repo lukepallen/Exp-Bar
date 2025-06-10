@@ -1,4 +1,4 @@
-#boss-bar {
+#exp-bar {
     .window-resize-handle {
         z-index: 1000;
     }
@@ -62,7 +62,7 @@
             padding: 3px;
         }
 
-        .boss-bar-container.classic {
+        .exp-bar-container.classic {
             --bar-height: 20px;
             --bar-temp-color: #7e7e7e;
             --bar-temp-alpha: 0.5;
@@ -111,7 +111,7 @@
 
         }
 
-        .boss-bar-container.matching-images{
+        .exp-bar-container.matching-images{
             width: 100%;
             position: relative;
 

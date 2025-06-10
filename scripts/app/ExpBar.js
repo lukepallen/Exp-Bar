@@ -1,39 +1,39 @@
 import { BAR_STYLES, MODULE_ID } from "../main.js";
 import { getProperty, HandlebarsApplication, mergeClone } from "../lib/utils.js";
 import {DEFAULT_BAR_STYLE, getSetting, setSetting} from "../settings.js";
-import {BossBarConfiguration} from "./BossBarConfiguration.js";
+import {ExpBarConfiguration} from "./ExpBarConfiguration.js";
 
-export function setBossBarHooks() {
+export function setExpBarHooks() {
     Hooks.on("updateScene", (scene, updates) => {
-        if (updates.flags?.bossbar && scene === game.scenes.viewed) BossBar.update();
+        if (updates.flags?.expbar && scene === game.scenes.viewed) ExpBar.update();
     });
-    Hooks.on("canvasReady", () => BossBar.update());
+    Hooks.on("canvasReady", () => ExpBar.update());
     Hooks.on("updateActor", (actor, updates) => {
-        ui.bossBar?._onActorUpdate(actor);
+        ui.expBar?._onActorUpdate(actor);
     });
 }
 
-export class BossBar extends HandlebarsApplication {
+export class ExpBar extends HandlebarsApplication {
     constructor(scene) {
         super();
-        if (ui.bossBar) ui.bossBar.close();
-        ui.bossBar = this;
+        if (ui.expBar) ui.expBar.close();
+        ui.expBar = this;
         this.scene = scene ?? game.scenes.viewed;
         this.savePosition = foundry.utils.debounce(this.savePosition.bind(this), 100);
     }
 
     static update() {
-        const current = ui.bossBar;
+        const current = ui.expBar;
         const scene = game.scenes.viewed;
         const actors = scene.getFlag(MODULE_ID, "actors") ?? [];
         if (!actors.length && current) return current.close();
-        if (actors.length) return new BossBar(scene).render({position: getSetting("barPosition"), force: true});
+        if (actors.length) return new ExpBar(scene).render({position: getSetting("barPosition"), force: true});
     }
 
     static resetPosition() {
-        setSetting("barPosition", {width: BossBar.defaultWidth, height: "auto", top: 50, left: BossBar.defaultLeft});
+        setSetting("barPosition", {width: ExpBar.defaultWidth, height: "auto", top: 50, left: ExpBar.defaultLeft});
         setSetting("resetPosition", false);
-        BossBar.update();
+        ExpBar.update();
     }
 
     static get DEFAULT_OPTIONS() {
@@ -105,13 +105,13 @@ export class BossBar extends HandlebarsApplication {
         if(!game.user.isGM) return;
         this.element.querySelector(".window-header").addEventListener("contextmenu", (event) => {
             event.preventDefault();
-            new BossBarConfiguration().render(true);
+            new ExpBarConfiguration().render(true);
         } );
     }
 
     setPosition(...args) {
         const r = super.setPosition(...args);
-        const barContainerOuterWidth = this.element.querySelector(".boss-bar-container").offsetWidth;
+        const barContainerOuterWidth = this.element.querySelector(".exp-bar-container").offsetWidth;
         this.element.style.setProperty("--bar-container-outer-width", `${barContainerOuterWidth}px`);
         this.savePosition(this.position);
         return r;

@@ -1,17 +1,17 @@
-import { BossBarConfiguration } from "./app/BossBarConfiguration.js";
+import { ExpBarConfiguration } from "./app/ExpBarConfiguration.js";
 
 export function initConfig() {
     Hooks.on("getSceneControlButtons", (controls) => {
-        console.log("Boss Bar | getSceneControlButtons", controls);
-        controls.tokens.tools.bossBar = {
-                name: "bossBar",
-                title: "bossbar.controls.bossUI.name",
+        console.log("Exp Bar | getSceneControlButtons", controls);
+        controls.tokens.tools.expBar = {
+                name: "expBar",
+                title: "expbar.controls.expUI.name",
                 icon: "fas fa-pastafarianism",
                 visible: game.user.isGM,
                 button: true,
                 onClick: async () => {
-                    await BossBarConfiguration.cleanUpActors();
-                    new BossBarConfiguration().render(true);
+                    await ExpBarConfiguration.cleanUpActors();
+                    new ExpBarConfiguration().render(true);
                 },
             };
     });

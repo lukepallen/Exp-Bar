@@ -4,7 +4,7 @@ import { getSetting } from "../settings.js";
 import { Socket } from "../lib/socket.js";
 import { BarStyleConfiguration } from "./BarStyleConfiguration.js";
 
-export class BossBarConfiguration extends HandlebarsApplication {
+export class ExpBarConfiguration extends HandlebarsApplication {
     constructor(scene) {
         super();
         this.#scene = scene ?? game.scenes.viewed;

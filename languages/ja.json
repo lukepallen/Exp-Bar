@@ -1,5 +1,5 @@
 {
-    "bossbar": {
+    "expbar": {
         "bar-style-configuration": {
             "add": "スタイルの追加",
             "background": "背景画像",
@@ -18,7 +18,7 @@
             "type-hint": "スタイルタイプを選択してください",
             "font": "フォントファミリー"
         },
-        "boss-bar-configuration": {
+        "exp-bar-configuration": {
             "edit-themes": "近い",
             "hideNameHint": "ボスバーで俳優の名前を隠す",
             "no-actors": "俳優が選択されていない、またはシーンに存在していません。",
@@ -26,11 +26,11 @@
             "save-pan": "保存",
             "title": "ボスバーの構成"
         },
-        "boss-bar": {
+        "exp-bar": {
             "title": "ボスバー"
         },
         "controls": {
-            "bossUI": {
+            "expUI": {
                 "name": "ボスバーの切り替え",
                 "warn": "トークンが選択されていません。 \n1 つまたは複数のトークンを選択して再試行してください"
             }

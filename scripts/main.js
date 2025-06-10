@@ -1,9 +1,9 @@
 import { initConfig } from "./config.js";
 import { registerSettings, setSetting } from "./settings.js";
-import {setBossBarHooks} from "./app/BossBar.js";
+import {setExpBarHooks} from "./app/ExpBar.js";
 import {Socket} from "./lib/socket.js";
 
-export const MODULE_ID = "bossbar";
+export const MODULE_ID = "expbar";
 
 export const BAR_STYLES = {
     CLASSIC: 0,
@@ -11,20 +11,20 @@ export const BAR_STYLES = {
 };
 
 export const BAR_STYLE_SELECT = {
-    0: "bossbar.settings.barStyle.classic",
-    1: "bossbar.settings.barStyle.matchingImages",
+    0: "expbar.settings.barStyle.classic",
+    1: "expbar.settings.barStyle.matchingImages",
 };
 
 export const TEXT_ALIGN = {
-    "left": "bossbar.settings.textAlign.left",
-    "center": "bossbar.settings.textAlign.center",
-    "right": "bossbar.settings.textAlign.right",
+    "left": "expbar.settings.textAlign.left",
+    "center": "expbar.settings.textAlign.center",
+    "right": "expbar.settings.textAlign.right",
 };
 
 Hooks.on("init", () => {
     initConfig();
     registerSettings();
-    setBossBarHooks();
+    setExpBarHooks();
 
     Socket.register("cameraPan", ({ uuid, scale, duration }) => {
         const token = fromUuidSync(uuid);
